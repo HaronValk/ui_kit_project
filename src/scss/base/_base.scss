@@ -25,7 +25,10 @@ body::before {
     height: 0px;
     background-color: transparent;
 }
-
+img{
+    max-width: 100%;
+    height: auto;
+}
 input,
 textarea {
     font-family: $baseFont;
