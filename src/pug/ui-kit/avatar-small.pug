@@ -1,0 +1,35 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Аватар, маленький';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Аватар, маленький
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +avatar-small(link, '.././img/avatars/avatar-small.jpg')
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +avatar-small(link, '.././img/avatars/avatar-small.jpg')
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/avatar-small.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin avatar-small(link = '#', imgPath)
+                p.avatar-small
+                    a.avatar-small__link(href=link)
+                        img.avatar-small__img(src= imgPath, alt="Аватарка", width='48px', height='48px')
