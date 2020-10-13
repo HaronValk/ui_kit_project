@@ -1,0 +1,16 @@
+.avatar-big{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #C4C4C4;
+    overflow: hidden;
+}
+.avatar-big__link{
+    display: block;
+    font-size: 0;
+}
+.avatar-big__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,35 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Кнопки - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Аватар, большой
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+       +avatar-big(link, '.././img/avatars/avatar-big.jpg')
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +avatar-small(link, '.././img/avatars/avatar-small.jpg')
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/avatar-big.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin avatar-big(link = '#', imgPath)
+                p.avatar-big
+                    a.avatar-big__link(href=link)
+                        img.avatar-big__img(src= imgPath, alt="Аватарка", width='160px', height='160px')
